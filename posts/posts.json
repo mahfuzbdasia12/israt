@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Best SEO Expert",
+    "excerpt": "Are you searching for the best SEO expert who can actually deliver real results — not just empty promises? You have come to the right place.",
+    "image": "image/mahfuz bd asia.png",
+    "url": "posts/BEST-SEO-EXPERT.html",
+    "category": ["SEO", "SMM", "Digital Marketing"],
+    "readTime": "3 min read",
+    "date": "2026-06-20T15:00:00Z"
+  },
+  {
+    "title": "Best Local SEO Expert",
+    "excerpt": "This is exactly where a best local SEO expert makes all the difference. My name is Mahfuz BD Asia, and I am a professional local SEO and SMM specialist in Bangladesh.",
+    "image": "image/mahfuz bd asia.png",
+    "url": "posts/best-local-seo-expert.html",
+    "category": ["SEO", "SMM", "Digital Marketing"],
+    "readTime": "3 min read",
+    "date": "2026-06-25T15:00:00Z"
+  },
+  {
+    "title": "Boost Local SEO: Quick Wins",
+    "excerpt": "Practical tactics to help local businesses rank faster in local search results.",
+    "image": "image/2745ef82-0cb0-4b63-a83d-9ba771b64ea2.png",
+    "url": "posts/boost-local-seo.html",
+    "category": "SEO",
+    "readTime": "4 min read",
+    "date": "2026-06-20T12:00:00Z"
+  },
+  {
+    "title": "Fashion Brand Social Growth",
+    "excerpt": "A case study on scaling a fashion brand with social-first strategies and creative testing.",
+    "image": "image/Fashion Brand Social Growth.jpg",
+    "url": "posts/fashion-social-growth.html",
+    "category": "Social",
+    "readTime": "5 min read",
+    "date": "2026-06-18T09:30:00Z"
+  },
+  {
+    "title": "Core Web Vitals Overhaul",
+    "excerpt": "How we improved page speed and CLS to boost organic rankings and conversions.",
+    "image": "image/Core Web Vitals Overhaul.jpg",
+    "url": "posts/core-web-vitals.html",
+    "category": "Performance",
+    "readTime": "6 min read",
+    "date": "2026-06-15T14:20:00Z"
+  },
+  {
+    "title": "SaaS Blog Authority Build",
+    "excerpt": "Content strategy and distribution tactics that grew organic traffic 3x for a SaaS startup.",
+    "image": "image/SaaS Blog Authority Build.jpg",
+    "url": "posts/saas-content-authority.html",
+    "category": "Content",
+    "readTime": "7 min read",
+    "date": "2026-06-10T08:00:00Z"
+  }
+]

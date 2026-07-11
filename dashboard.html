@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SEO COMMAND | Mahfuz BD Asia Analytics</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Central Stylesheet -->
+    <link rel="stylesheet" href="style.min.css"/>
+    <style>
+        body {
+            padding-top: 100px;
+        }
+        .main-dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .dashboard-main-content {
+            grid-column: span 9;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .dashboard-sidebar {
+            grid-column: span 3;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        @media (max-width: 1024px) {
+            .dashboard-main-content, .dashboard-sidebar {
+                grid-column: span 12;
+            }
+        }
+        
+        .pulse-overlay-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .map-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: var(--radius-full);
+            transform: translate(-50%, -50%);
+        }
+        @media (max-width: 768px) {
+            header .nav-links {
+                display: flex !important;
+                position: static !important;
+                flex-direction: row !important;
+                padding: 0 !important;
+                background: none !important;
+                border: none !important;
+                gap: 16px !important;
+                width: auto !important;
+            }
+            header .mobile-nav-toggle {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-mesh"></div>
+
+    <!-- Navigation Header -->
+    <header class="glass-header">
+        <div class="container nav-container" style="max-width: 1600px;">
+            <div style="display: flex; align-items: center; gap: 24px;">
+                <h1 class="text-secondary text-headline-lg" style="font-size: 20px; font-weight: 700; letter-spacing: 0.05em; display: flex; align-items: center; gap: 8px;">
+                    <span class="text-primary material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+                    SEO COMMAND
+                </h1>
+                <nav class="nav-links" style="display: flex; gap: 24px;">
+                    <a class="text-label-caps active" href="#">Live Tracking</a>
+                    <a class="text-label-caps" href="#" style="opacity: 0.6;">Reports</a>
+                    <a class="text-label-caps" href="#" style="opacity: 0.6;">Settings</a>
+                </nav>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 24px;">
+                <div style="text-align: right;" class="md-hidden">
+                    <span class="text-label-caps text-muted" style="font-size: 9px; display: block;">System Status</span>
+                    <span class="text-tertiary" style="font-size: 11px; font-weight: 700; display: flex; align-items: center; gap: 4px; justify-content: flex-end;">
+                        <span class="pulse-indicator pulse-green" style="width: 6px; height: 6px;"></span> OPERATIONAL
+                    </span>
+                </div>
+                <a href="login.html" class="btn btn-outline" style="padding: 10px 18px; display: flex; align-items: center; gap: 8px; font-size: 12px;">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">logout</span> LOGOUT
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container" style="max-width: 1600px; padding-bottom: 80px;">
+        <div class="main-dashboard-grid">
+            <!-- Left Side Canvas -->
+            <div class="dashboard-main-content">
+                <!-- Presence Map -->
+                <section class="map-section p-8">
+                    <div class="map-bg-image" style="background-image: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=2000');"></div>
+                    
+                    <div style="position: relative; z-index: 5; display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+                        <div>
+                            <h2 class="text-label-caps text-muted" style="font-size: 12px; display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                <span class="material-symbols-outlined text-primary" style="font-size: 18px;">public</span> GLOBAL REAL-TIME PRESENCE
+                            </h2>
+                            <p class="text-display-xl" id="activeUserCounter" style="font-size: 64px; margin-bottom: 4px;">4,820</p>
+                            <p class="text-label-caps text-primary" style="font-size: 11px; font-weight: 700;">ACTIVE USERS NOW</p>
+                        </div>
+                        
+                        <!-- Pulse Dots Mock Overlay -->
+                        <div class="pulse-overlay-container">
+                            <!-- Dhaka Point -->
+                            <div class="map-dot pulse-pink" style="top: 55%; left: 70%;"></div>
+                            <!-- US Point -->
+                            <div class="map-dot pulse-pink" style="top: 35%; left: 25%;"></div>
+                            <!-- Europe Point -->
+                            <div class="map-dot pulse-pink" style="top: 30%; left: 50%;"></div>
+                            <!-- SE Asia Point -->
+                            <div class="map-dot pulse-pink" style="top: 60%; left: 75%;"></div>
+                        </div>
+
+                        <!-- Top destination badge -->
+                        <div class="map-badge" style="align-self: flex-end;">
+                            <span class="text-label-caps text-muted" style="font-size: 9px; display: block; margin-bottom: 4px;">TOP DESTINATION</span>
+                            <span class="text-secondary" style="font-size: 18px; font-weight: 600; display: block;">Dhaka, BD</span>
+                            <span class="text-tertiary" style="font-size: 12px; display: flex; align-items: center; gap: 4px; margin-top: 4px;">
+                                <span class="material-symbols-outlined" style="font-size: 14px;">trending_up</span> +18.4% local surge
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Metrics Grid -->
+                <div class="grid grid-cols-3 md-grid-cols-1">
+                    <!-- Total Users -->
+                    <div class="glass-card p-6">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                            <span class="material-symbols-outlined text-muted" style="font-size: 24px;">group</span>
+                            <span class="chip" style="background: rgba(106, 218, 180, 0.1); color: var(--color-tertiary); border: none; font-size: 10px;">+12.4%</span>
+                        </div>
+                        <span class="text-label-caps text-muted" style="font-size: 11px; display: block; margin-bottom: 4px;">TOTAL USERS</span>
+                        <p class="text-headline-lg" style="font-size: 28px;">128.4k</p>
+                        <p class="text-muted" style="font-size: 11px; margin-top: 8px; font-style: italic;">Month-over-month growth</p>
+                    </div>
+
+                    <!-- Active Sessions -->
+                    <div class="glass-card p-6" style="border-left: 2px solid var(--color-primary-container);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                            <span class="material-symbols-outlined text-primary" style="font-size: 24px;">bolt</span>
+                            <span class="chip" style="font-size: 10px;">STABLE</span>
+                        </div>
+                        <span class="text-label-caps text-muted" style="font-size: 11px; display: block; margin-bottom: 4px;">ACTIVE SESSIONS</span>
+                        <p class="text-headline-lg" style="font-size: 28px;">4,291</p>
+                        <p class="text-muted" style="font-size: 11px; margin-top: 8px;">Currently being tracked</p>
+                    </div>
+
+                    <!-- Bounce Rate -->
+                    <div class="glass-card p-6">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                            <span class="material-symbols-outlined text-muted" style="font-size: 24px;">analytics</span>
+                            <span class="chip" style="background: rgba(255, 81, 106, 0.1); color: var(--color-primary-container); border: none; font-size: 10px;">-2.1%</span>
+                        </div>
+                        <span class="text-label-caps text-muted" style="font-size: 11px; display: block; margin-bottom: 4px;">BOUNCE RATE</span>
+                        <p class="text-headline-lg" style="font-size: 28px;">24.8%</p>
+                        <p class="text-primary" style="font-size: 11px; margin-top: 8px;">Spike detected in /services/seo</p>
+                    </div>
+                </div>
+
+                <!-- Traffic Analytics Chart -->
+                <section class="glass-card p-8">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; flex-wrap: wrap; gap: 16px;">
+                        <div>
+                            <h3 class="text-secondary text-headline-lg" style="font-size: 20px;">Traffic Analytics</h3>
+                            <p class="text-muted" style="font-size: 14px;">Engagement and click-through velocity</p>
+                        </div>
+                        <div style="background: var(--bg-primary); border: 1px solid var(--color-outline); border-radius: var(--radius-lg); padding: 4px; display: flex;">
+                            <button class="btn btn-primary" style="font-size: 10px; padding: 6px 12px; border-radius: var(--radius-md);">30 Days</button>
+                            <button class="btn btn-secondary" style="font-size: 10px; padding: 6px 12px; border: none; border-radius: var(--radius-md);">60 Days</button>
+                        </div>
+                    </div>
+
+                    <!-- Vertical Bar Graph -->
+                    <div class="chart-container">
+                        <!-- Simulated lines -->
+                        <div class="chart-grid-line" style="bottom: 0%;"></div>
+                        <div class="chart-grid-line" style="bottom: 33%;"></div>
+                        <div class="chart-grid-line" style="bottom: 66%;"></div>
+                        <div class="chart-grid-line" style="bottom: 100%;"></div>
+
+                        <!-- Bar Heights mapped -->
+                        <div class="chart-bar" style="height: 60%;">
+                            <div class="chart-bar-tooltip">12k clicks</div>
+                        </div>
+                        <div class="chart-bar" style="height: 45%;">
+                            <div class="chart-bar-tooltip">9.5k clicks</div>
+                        </div>
+                        <div class="chart-bar" style="height: 55%;">
+                            <div class="chart-bar-tooltip">11k clicks</div>
+                        </div>
+                        <div class="chart-bar" style="height: 75%;">
+                            <div class="chart-bar-tooltip">15k clicks</div>
+                        </div>
+                        <div class="chart-bar" style="height: 85%;">
+                            <div class="chart-bar-tooltip">18k clicks</div>
+                        </div>
+                        <div class="chart-bar" style="height: 40%;">
+                            <div class="chart-bar-tooltip">8k clicks</div>
+                        </div>
+                        <div class="chart-bar highlight" style="height: 95%;">
+                            <div class="chart-bar-tooltip">28k clicks</div>
+                        </div>
+                        <div class="chart-bar" style="height: 65%;">
+                            <div class="chart-bar-tooltip">13k clicks</div>
+                        </div>
+                        <div class="chart-bar" style="height: 50%;">
+                            <div class="chart-bar-tooltip">10k clicks</div>
+                        </div>
+                        <div class="chart-bar" style="height: 70%;">
+                            <div class="chart-bar-tooltip">14k clicks</div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom labels -->
+                    <div class="flex justify-between text-label-caps text-muted" style="font-size: 10px; margin-top: 16px;">
+                        <span>Oct 01</span>
+                        <span>Oct 10</span>
+                        <span>Oct 20</span>
+                        <span>Oct 31</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar Panel -->
+            <aside class="dashboard-sidebar">
+                <!-- Device mix progress bars -->
+                <div class="glass-card p-6">
+                    <h3 class="text-label-caps text-muted" style="font-size: 11px; display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                        <span class="material-symbols-outlined text-primary" style="font-size: 16px;">devices</span> DEVICE MIX
+                    </h3>
+
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px;">
+                                <span class="text-secondary" style="font-weight: 500;">Mobile</span>
+                                <span class="text-primary" style="font-weight: 700;">68%</span>
+                            </div>
+                            <div class="progress-bar" style="height: 6px;">
+                                <div class="progress-fill" style="width: 68%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px;">
+                                <span class="text-secondary" style="font-weight: 500;">Desktop</span>
+                                <span class="text-muted">24%</span>
+                            </div>
+                            <div class="progress-bar" style="height: 6px;">
+                                <div class="progress-fill" style="width: 24%; background: var(--color-text-muted);"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px;">
+                                <span class="text-secondary" style="font-weight: 500;">Tablet</span>
+                                <span class="text-muted">8%</span>
+                            </div>
+                            <div class="progress-bar" style="height: 6px;">
+                                <div class="progress-fill" style="width: 8%; background: rgba(255,255,255,0.15);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Generation Terminal -->
+                <div class="glass-card p-6 text-center" style="display: flex; flex-direction: column; align-items: center;">
+                    <h3 class="text-label-caps text-muted" style="font-size: 11px; width: 100%; text-align: left; margin-bottom: 24px;">Security Terminal</h3>
+                    
+                    <div class="card-inner" style="background: var(--bg-pitch-black); padding: 24px; border-radius: var(--radius-lg); margin-bottom: 20px; width: 100%; display: flex; justify-content: center; align-items: center; min-height: 120px;">
+                        <span id="tokenDisplay" style="font-family: monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.05em; color: var(--color-text-muted); opacity: 0.5;">[TOKEN INACTIVE]</span>
+                    </div>
+                    
+                    <p class="text-muted" style="font-size: 11px; line-height: 1.5; margin-bottom: 24px;">Generate cryptographic token to authenticate external mobile diagnostic terminals.</p>
+                    <button id="generateTokenBtn" class="btn btn-primary w-full" style="padding: 14px; border-radius: var(--radius-lg);">Generate Token</button>
+                </div>
+
+                <!-- Urgent Notification alert -->
+                <div class="glass-card p-6" style="background: rgba(255, 81, 106, 0.05); border-color: rgba(255, 81, 106, 0.2); overflow: hidden; position: relative;">
+                    <div style="position: relative; z-index: 5;">
+                        <p class="text-primary" style="font-size: 10px; font-weight: 700; letter-spacing: 0.15em; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                            <span class="material-symbols-outlined" style="font-size: 16px;">priority_high</span> URGENT NOTIFICATION
+                        </p>
+                        <p class="text-secondary" style="font-size: 13px; font-weight: 500; line-height: 1.5; margin-bottom: 16px;">Semantic cluster decay detected in "SEO Services" category index.</p>
+                        <a href="#" id="deepAuditLink" class="text-primary" style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+                            Run Deep Audit <span class="material-symbols-outlined" style="font-size: 12px;">arrow_forward_ios</span>
+                        </a>
+                    </div>
+                    <span class="material-symbols-outlined" style="position: absolute; right: -20px; bottom: -20px; font-size: 96px; opacity: 0.05; color: var(--color-primary-container);">bug_report</span>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding-top: 40px; padding-bottom: 40px; background: #0e0e0e;">
+        <div class="container text-center">
+            <p class="text-muted" style="font-size: 13px;">© 2024 Mahfuz BD Asia. | Precision SEO Engineering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script connection -->
+    <script src="js/dashboard.min.js"></script>
+</body>
+</html>

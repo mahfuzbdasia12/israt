@@ -1,0 +1,55 @@
+# Robots.txt for Mahfuz BD Asia - SEO Expert Portfolio
+# Last Updated: June 29, 2024
+
+# Allow all bots to crawl the entire site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: *.css$
+Disallow: *.js$
+
+# Allow images from Google Images
+User-agent: Googlebot-Image
+Allow: /image/
+
+# Allow Google to crawl and index
+User-agent: Googlebot
+Allow: /
+
+# Allow Bing to crawl and index
+User-agent: Bingbot
+Allow: /
+
+# Set crawl delay (in seconds) for respectful crawling
+# Googlebot doesn't use this, but other bots may
+Crawl-delay: 1
+Request-rate: 30/60
+
+# Sitemap locations for all search engines
+Sitemap: https://mahfuzbdasia.com/sitemap.xml
+
+# Important URLs for search engines
+# Note: Use XML sitemap for primary crawl directives
+
+# Allow specific important pages with high priority
+User-agent: Googlebot
+Allow: /#hero
+Allow: /#services
+Allow: /#case-studies
+Allow: /#portfolio
+Allow: /#pricing
+Allow: /posts/
+
+# Disallow private/admin areas
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+
+# Performance: Set specific crawl rates for Googlebot
+User-agent: Googlebot
+Crawl-delay: 0
+
+# Standards compliance
+# Using modern robots.txt standards (2019+)
