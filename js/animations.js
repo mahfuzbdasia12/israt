@@ -688,7 +688,7 @@
                 state = 'notice';
                 noticeTimer = 45;
                 dir = mx > x ? 1 : -1;
-                bubbleText = 'Miaw! I am katch far';
+                bubbleText = 'Miaw! I am ISRAT';
                 bubbleAlpha = 1;
                 bubbleFloatY = 0;
             } else {
